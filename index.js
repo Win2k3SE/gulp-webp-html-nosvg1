@@ -4,6 +4,7 @@ const through = require('through2')
 const pluginName = 'gulp-webp-html-nosvg'
 
 module.exports = function () {
+    console.log('its working')
 	const extensions = ['.jpg', '.png', '.jpeg', '.GIF', '.gif', '.JPG', '.PNG', '.JPEG']
 	return through.obj(function (file, enc, cb) {
 		if (file.isNull()) {
