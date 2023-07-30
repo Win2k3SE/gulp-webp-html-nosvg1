@@ -34,9 +34,12 @@ module.exports = function () {
 							newUrlArr = [],
 							newHTMLArr = []
 						while (regexpItem = Re.exec(line)) {
+                            console.log('regexpItem', regexpItem)
 							regexArr.push(regexpItem)
 						}
+                        console.log('regexArr', regexArr)
 						regexArr.forEach(item => {
+                            console.log('item', item)
 							if (item[0].includes('srcset=')) {
 								newUrlArr.push(`${item[2]}, ${getSrcUrl(item[0], 'srcset')}`)
 							} else {
