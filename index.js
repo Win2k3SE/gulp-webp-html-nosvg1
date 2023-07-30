@@ -29,7 +29,7 @@ module.exports = function () {
 					if (line.indexOf('<img') + 1 && !inPicture) {
                         console.log('line', line)
 						// Новый урл с .webp
-						const Re = /<img([^>]*)src=\"(\S+?)\"([^>]*)>/gi
+						const Re = /<img([^>]*)src=\"([^"]+?)\"([^>]*)>/gi
 						let regexpItem,
 							regexArr = [],
 							imgTagArr = [],
