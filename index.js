@@ -21,11 +21,13 @@ module.exports = function () {
 				.toString()
 				.split('\n')
 				.map(function (line) {
+                    console.log('    -------------------')
 					// Вне <picture/>?
 					if (line.indexOf('<picture') + 1) inPicture = true
 					if (line.indexOf('</picture') + 1) inPicture = false
 					// Проверяем есть ли <img/>
 					if (line.indexOf('<img') + 1 && !inPicture) {
+                        console.log('line', line)
 						// Новый урл с .webp
 						const Re = /<img([^>]*)src=\"(\S+)\"([^>]*)>/gi
 						let regexpItem,
